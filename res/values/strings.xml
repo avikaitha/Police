@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Police</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_to">To</string>
+    <string name="title_criminal_activity">Selection List</string>
+    <string name="title_send_alerts">Send Alerts</string>
+	<string name="to_textview">To</string>
+	<string name="about_textview">About</string>
+	<string name="crim_hint_textview">Criminal Name</string>
+	<string name="desc_textView">Description</string>
+	<string name="hint_desc_textview">Description</string>
+	<string name="send_button">Send</string>
+	<string name="cancel_button">Cancel</string>
+	<string name="search_crim_editText">Search Criminal Name</string>
+	<string name="search_action_bar">Search</string>
+    <string name="title_menu">Menu</string>
+    <string name="title_inbox">Inbox</string>
+    
+    <string name="hint_login">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="pol_hint_view">Police Name</string>
+     
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Push Notifications</string>
+    <string name="error_config">Please set the %1$s constant and recompile the app.</string>
+    <string name="already_registered">Device is already registered on server.</string>
+    <string name="gcm_registered">From GCM: device successfully registered!</string>
+    <string name="gcm_unregistered">From GCM: device successfully unregistered!</string>
+    <string name="gcm_message">From GCM: you got message!</string>
+    <string name="gcm_error">From GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
+    <string name="server_registering">Trying (attempt %1$d/%2$d) to register device on Demo Server.</string>
+    <string name="server_registered">From Demo Server: successfully added device!</string>
+    <string name="server_unregistered">From Demo Server: successfully removed device!</string>
+    <string name="server_register_error">Could not register device on Demo Server after %1$d attempts.</string>
+    <string name="server_unregister_error">Could not unregister device on Demo Server (%1$s).</string>
+    <string name="options_register">Register</string>
+    <string name="options_unregister">Unregister</string>
+    <string name="options_clear">Clear</string>
+    <string name="options_exit">Exit</string>
+    <string name="crim_name_view">Criminal Name:</string>
+    <string name="aka_textView">AKA:</string>
+    <string name="age_textView">Age:</string>
+    <string name="religion_textView">Religion:</string>
+    <string name="type_textView">Type:</string>
+    <string name="address_textView">Address:</string>
+    <string name="message_textView">Message:</string>
+    <string name="empty">empty</string>
+		
+    
+
+</resources>

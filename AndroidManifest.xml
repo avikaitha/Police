@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.avi.police"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.avi.police.permission.C2D_MESSAGE"/>
+    <permission android:name="com.avi.police.permission.C2D_MESSAGE" android:protectionLevel="signature"></permission>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/police"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name="com.avi.police.MainActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+            
+             >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".CriminalActivity"/>
+        <activity
+            android:launchMode="singleTop"
+            android:name="com.avi.police.DetailsActivity"
+            android:label="@string/title_criminal_activity" >
+            <intent-filter >
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+            <meta-data 
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+            
+        </activity>
+        
+        <activity
+            android:name="com.avi.police.SendAlerts"
+            android:label="@string/title_send_alerts" >
+            
+        </activity>
+        <activity
+            android:name="com.avi.police.FirstActivity"
+            android:label="@string/title_menu"
+             >
+            
+        </activity>
+         <activity
+            android:name="com.avi.police.CriminalDetails"
+            android:label="@string/title_menu"
+            
+             >
+            
+        </activity>
+        <activity
+            android:name="com.avi.police.Inbox"
+            android:label="@string/title_inbox"
+            
+             >
+            
+        </activity>
+        <activity
+            android:name="com.avi.police.CriminalActivity"
+            android:label="@string/title_criminal_activity"
+            
+             >
+            
+        </activity>
+        <activity
+            android:name="com.avi.police.AreaActivity"
+            android:label="@string/title_criminal_activity"
+            
+             >
+            
+        </activity>
+        
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.avi.police" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GCMIntentService" />
+    </application>
+
+</manifest>
